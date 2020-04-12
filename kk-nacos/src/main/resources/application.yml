@@ -1,0 +1,22 @@
+server:
+  port: 81
+spring:
+  application:
+    name: nacos-node
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        weight: 1
+        cluster-name:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:7070
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    nacos-discovery:
+      enabled: true
